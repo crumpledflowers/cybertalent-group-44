@@ -1,5 +1,5 @@
 # 🔐 Simple Password Manager 
-This is a **minimal password manager** built in Python as part of my secondary project for the **INSA Summer Camp**. It securely stores and retrieves passwords using encryption and a master password.
+This is a **minimal password manager** built in Python as part of our secondary project for the **INSA Summer Camp**. It securely stores and retrieves passwords using encryption and a master password.
 
 ---
 
@@ -13,7 +13,7 @@ This is a **minimal password manager** built in Python as part of my secondary p
 
 ---
 
-## 📦 How It Works
+## How It Works
 
 1. On first run, it generates an encryption key (`key.key`).
 2. You enter a **master password** to unlock your vault.
@@ -24,14 +24,14 @@ This is a **minimal password manager** built in Python as part of my secondary p
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 - Python 3.x
 - [`cryptography`](https://pypi.org/project/cryptography/) library
 - Plain text file storage (`vault.txt`)
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the repo
 ```bash
