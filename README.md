@@ -1,90 +1,118 @@
----
 
-# 🔐 VaultGuard – Simple Password Manager  
-
-*A minimal, secure password manager built in Python for the INSA Summer Camp.*  
-
-![Demo](https://img.shields.io/badge/status-active-brightgreen) 
-![Python](https://img.shields.io/badge/python-3.8%2B-blue) 
-![License](https://img.shields.io/badge/license-MIT-orange)  
-
-Securely store and manage passwords with **AES encryption** and a master password. All data is encrypted locally—no cloud dependency.  
 
 ---
 
-## ✨ Features  
-- **🔐 Master Password Protection** – Single password to unlock your vault.  
-- **🛡️ AES-256 Encryption** – Uses Fernet (symmetric encryption via `cryptography`).  
-- **📝 Credential Management** – Add, view, and manage service credentials.  
-- **📁 Local Storage** – Encrypted data stored in `vault.txt` (auto-created on first run).  
-- **🚫 No Internet Needed** – Fully offline for maximum privacy.  
+# 🔐 VaultGuard – Simple Password Manager
+
+*A minimal, secure password manager built in Python for the INSA Summer Camp.*
+
+![Status](https://img.shields.io/badge/status-active-brightgreen)
+![Python](https://img.shields.io/badge/python-3.8%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-orange)
+
+Securely store and manage passwords with **AES encryption** and a master password. All data is encrypted **locally**—no cloud dependency.
 
 ---
 
-## ⚙️ How It Works  
-1. **First Run**: Generates an encryption key (`key.key`) and prompts for a master password.  
-2. **Unlock Vault**: Enter the master password to decrypt and access stored credentials.  
-3. **Manage Passwords**:  
-   - Add new `(service, username, password)` entries.  
-   - View all saved credentials (decrypted temporarily).  
-4. **Secure Storage**: All data is encrypted before saving to `vault.txt`.  
+## ✨ Features
+
+* 🔐 **Master Password Protection** – A single password unlocks the vault
+* 🛡️ **AES-256 Encryption** – Secure with Fernet (from `cryptography`)
+* 📝 **Credential Management** – Add, view, and manage service credentials
+* 📁 **Local Storage** – Encrypted data saved in `vault.txt`, created on first run
+* 🚫 **Fully Offline** – No internet access required, ensuring maximum privacy
 
 ---
 
-## 🛠️ Tech Stack  
-- **Python 3.8+**  
-- **Dependencies**:  
-  - [`cryptography`](https://pypi.org/project/cryptography/) (for Fernet encryption).  
-  - `hashlib` (for key derivation).  
-- **Storage**: Plaintext → Encrypted (`vault.txt` + `key.key`).  
+## ⚙️ How It Works
+
+1. **First Run**
+
+   * Prompts user to set a master password
+   * Generates a secure encryption key (`key.key`)
+
+2. **Vault Access**
+
+   * Enter your master password to unlock encrypted credentials
+
+3. **Credential Management**
+
+   * Add service credentials (e.g., site, username, password)
+   * View decrypted credentials temporarily during runtime
+
+4. **Secure Storage**
+
+   * Passwords are encrypted and saved locally in `vault.txt`
 
 ---
 
-## 🚀 Getting Started  
+## 🛠️ Tech Stack
 
-### Prerequisites  
-- Python 3.8+  
-- `pip` (Python package manager).  
+* **Language**: Python 3.8+
+* **Libraries**:
 
-### Installation  
-1. **Clone the repository**:  
-   ```bash
-   git clone https://github.com/crumpledflowers/cybertalent-group-44.git
-   cd cybertalent-group-44/password-manager
-   ```
+  * [`cryptography`](https://pypi.org/project/cryptography/) – AES/Fernet encryption
+  * `hashlib` – Password hashing and key derivation
+* **Storage**:
 
-2. **Install dependencies**:  
-   ```bash
-   pip install cryptography
-   ```
-
-3. **Run the password manager**:  
-   ```bash
-   python main.py
-   ```
+  * `vault.txt` – Encrypted vault file
+  * `key.key` – Stored encryption key (must be kept safe)
 
 ---
 
-## 🔒 Security Notes  
-⚠️ **Important**:  
-- The master password **cannot be recovered**. If lost, encrypted data is permanently inaccessible.  
-- For real-world use, consider:  
-  - Adding **2FA** (e.g., TOTP).  
-  - Using a **keyring** instead of `key.key` for key storage.  
-  - Implementing **brute-force protection** (e.g., delay after failed attempts).  
+## 🚀 Getting Started
+
+### Prerequisites
+
+* Python 3.8 or later
+* `pip` for installing dependencies
+
+### Installation & Running
+
+```bash
+git clone https://github.com/crumpledflowers/vault-guard-cli.git
+cd vault-guard-cli
+pip install -r requirements.txt
+python main.py
+```
+
+If `requirements.txt` is not present, install manually:
+
+```bash
+pip install cryptography
+```
 
 ---
 
-## 📜 License  
-MIT License. See [LICENSE](LICENSE) for details.  
+## 🔒 Security Notes
+
+> ⚠️ **Important:**
+
+* Your **master password is unrecoverable** if forgotten — store it safely
+* For production or long-term use, consider adding:
+
+  * ✅ Two-Factor Authentication (2FA)
+  * 🔁 Brute-force attempt limits or lockout timer
+  * 🔍 Audit logging or intrusion alerts
 
 ---
 
-## 🙋 FAQ  
-**Q: Can I use this for production?**  
-A: This is a **proof-of-concept**. For critical use, consider audited tools like Bitwarden or KeePass.  
+## 📁 Project Structure
 
-**Q: How do I reset the vault?**  
-A: Delete `vault.txt` and `key.key`, then restart the app.  
+```
+vault-guard-cli/
+├── main.py          # Application entry point
+├── vault.txt        # Encrypted credentials (auto-generated)
+├── key.key          # Encryption key (auto-generated)
+└── README.md        # Project documentation
+```
 
 ---
+
+## 📜 License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+
+---
+
+
