@@ -1,7 +1,3 @@
-Got it ✅ You’d like me to **add blockchain** and the **Ethiopian National ID (FIDA) concept** into your README so it looks complete and professional.
-Here’s an updated version with those additions:
-
----
 
 # 🗳️ Ethio E-Voting Web App: Blockchain-Based
 
