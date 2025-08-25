@@ -1,7 +1,7 @@
 
 # 🗳️ Ethio E-Voting Web App: Blockchain-Based
 
-*A transparent and secure digital voting system built with React, Node.js, MongoDB, and Blockchain for the INSA Summer Camp.*
+*A transparent and secure digital voting system built with React, Node.js, MongoDB, and Blockchain for the INSA Summer Camp and others that need voting.*
 
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
 ![React](https://img.shields.io/badge/frontend-React-61DAFB?logo=react\&logoColor=white)
